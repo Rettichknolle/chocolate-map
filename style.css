@@ -1,0 +1,74 @@
+body {
+    position: relative;
+    font-family: "Courier New", sans-serif;
+    background-color: #e6d8d1;
+    color: #6D340C;
+    margin: 0;
+    width: 100%;
+}
+
+.ui-element {
+background-color: #e6d8d1;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+}
+
+#mouseover-label{
+    position: fixed;
+    top: 96px;
+    left: 56px;
+    width: 200px;
+    height: 40px;
+}
+
+.highlight{
+    stroke:aqua;
+    stroke-width: 2px;
+    transform: scale(5);
+}
+.no-highlight-anymore {
+    background-color: rgb(43, 92, 255)
+}
+.bar {
+    background-color: white;
+    position:absolute;
+}
+
+.companyCircle {
+    position:absolute;
+    border-radius: 50%;
+    background-color: #6D340C;
+}
+
+.originCircle {
+    position:absolute;
+    border-radius: 50%;
+    background-color: #a75f29;
+}
+
+.toggleCompany {
+    position: absolute;
+    top: 56px;
+    left: 56px;
+    size: 96px;
+    color: #6D340C;
+}
+
+.toggleOrigin {
+    position: absolute;
+    top: 56px;
+    left: 136px;
+    size: 96px;
+    color: #6D340C;
+}
+
+.toggleStacked {
+    position: absolute;
+    top: 56px;
+    left: 216px;
+    size: 96px;
+    color: #6D340C;
+}

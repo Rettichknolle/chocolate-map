@@ -1,0 +1,266 @@
+[
+  {
+    "companyLocation": "Argentina",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "Australia",
+    "companyAmount": 51
+  },
+  {
+    "companyLocation": "Austria",
+    "companyAmount": 30
+  },
+  {
+    "companyLocation": "Belgium",
+    "companyAmount": 56
+  },
+  {
+    "companyLocation": "Bolivia",
+    "companyAmount": 2
+  },
+  {
+    "companyLocation": "Brazil",
+    "companyAmount": 23
+  },
+  {
+    "companyLocation": "Canada",
+    "companyAmount": 158
+  },
+  {
+    "companyLocation": "Chile",
+    "companyAmount": 2
+  },
+  {
+    "companyLocation": "Colombia",
+    "companyAmount": 24
+  },
+  {
+    "companyLocation": "Costa rica",
+    "companyAmount": 9
+  },
+  {
+    "companyLocation": "Czech republic",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Denmark",
+    "companyAmount": 31
+  },
+  {
+    "companyLocation": "Dominican republic",
+    "companyAmount": 11
+  },
+  {
+    "companyLocation": "Ecuador",
+    "companyAmount": 50
+  },
+  {
+    "companyLocation": "El salvador",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Fiji",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "Finland",
+    "companyAmount": 2
+  },
+  {
+    "companyLocation": "France",
+    "companyAmount": 167
+  },
+  {
+    "companyLocation": "Germany",
+    "companyAmount": 39
+  },
+  {
+    "companyLocation": "Ghana",
+    "companyAmount": 1
+  },
+  {
+    "companyLocation": "Grenada",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Guatemala",
+    "companyAmount": 10
+  },
+  {
+    "companyLocation": "Honduras",
+    "companyAmount": 6
+  },
+  {
+    "companyLocation": "Hungary",
+    "companyAmount": 25
+  },
+  {
+    "companyLocation": "Iceland",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "India",
+    "companyAmount": 2
+  },
+  {
+    "companyLocation": "Ireland",
+    "companyAmount": 5
+  },
+  {
+    "companyLocation": "Israel",
+    "companyAmount": 9
+  },
+  {
+    "companyLocation": "Italy",
+    "companyAmount": 67
+  },
+  {
+    "companyLocation": "Japan",
+    "companyAmount": 26
+  },
+  {
+    "companyLocation": "Lithuania",
+    "companyAmount": 8
+  },
+  {
+    "companyLocation": "Madagascar",
+    "companyAmount": 13
+  },
+  {
+    "companyLocation": "Malaysia",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Martinique",
+    "companyAmount": 1
+  },
+  {
+    "companyLocation": "Mexico",
+    "companyAmount": 8
+  },
+  {
+    "companyLocation": "Netherlands",
+    "companyAmount": 20
+  },
+  {
+    "companyLocation": "New zealand",
+    "companyAmount": 26
+  },
+  {
+    "companyLocation": "Nicaragua",
+    "companyAmount": 10
+  },
+  {
+    "companyLocation": "Norway",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Peru",
+    "companyAmount": 19
+  },
+  {
+    "companyLocation": "Philippines",
+    "companyAmount": 5
+  },
+  {
+    "companyLocation": "Poland",
+    "companyAmount": 7
+  },
+  {
+    "companyLocation": "Portugal",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Puerto rico",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "Russia",
+    "companyAmount": 1
+  },
+  {
+    "companyLocation": "Sao tome",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "Sao tome & principe (?)",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "Scotland",
+    "companyAmount": 10
+  },
+  {
+    "companyLocation": "Singapore",
+    "companyAmount": 13
+  },
+  {
+    "companyLocation": "South africa",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "South korea",
+    "companyAmount": 8
+  },
+  {
+    "companyLocation": "Spain",
+    "companyAmount": 35
+  },
+  {
+    "companyLocation": "St. lucia",
+    "companyAmount": 3
+  },
+  {
+    "companyLocation": "St.vincent-grenadines",
+    "companyAmount": 1
+  },
+  {
+    "companyLocation": "Suriname",
+    "companyAmount": 1
+  },
+  {
+    "companyLocation": "Sweden",
+    "companyAmount": 6
+  },
+  {
+    "companyLocation": "Switzerland",
+    "companyAmount": 43
+  },
+  {
+    "companyLocation": "Taiwan",
+    "companyAmount": 10
+  },
+  {
+    "companyLocation": "Thailand",
+    "companyAmount": 5
+  },
+  {
+    "companyLocation": "U.a.e.",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "U.k.",
+    "companyAmount": 117
+  },
+  {
+    "companyLocation": "U.S.A",
+    "companyAmount": 948
+  },
+  {
+    "companyLocation": "Vanuatu",
+    "companyAmount": 4
+  },
+  {
+    "companyLocation": "Venezuela",
+    "companyAmount": 31
+  },
+  {
+    "companyLocation": "Vietnam",
+    "companyAmount": 15
+  },
+  {
+    "companyLocation": "Wales",
+    "companyAmount": 1
+  }
+]
