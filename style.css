@@ -20,7 +20,7 @@ background-color: #e6d8d1;
     position: fixed;
     top: 96px;
     left: 56px;
-    width: 200px;
+    width: 300px;
     height: 40px;
 }
 
@@ -54,21 +54,30 @@ background-color: #e6d8d1;
     top: 56px;
     left: 56px;
     size: 96px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     color: #6D340C;
 }
 
 .toggleOrigin {
     position: absolute;
     top: 56px;
-    left: 136px;
+    left: 256px;
     size: 96px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     color: #6D340C;
 }
 
 .toggleStacked {
     position: absolute;
     top: 56px;
-    left: 216px;
+    left: 410px;
     size: 96px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     color: #6D340C;
 }

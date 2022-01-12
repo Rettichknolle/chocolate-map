@@ -95,7 +95,8 @@ function stackedCompanyDiagram() {
 
             companyBox.mouseover(function () {
                 companyBox.addClass("highlight");
-                hoverLabel.text(companyBox.data().companyName);
+                hoverLabel.html(`<p>Company: ${companyBox.data().companyName}<p>
+                <p>Manufactured: ${companyBox.data().companyLocationTotal}<p><p>Origin: ${companyBox.data().beanOriginTotal}<p>`);
             });
             companyBox.mouseout(function () {
                 companyBox.removeClass("highlight");
@@ -265,7 +266,8 @@ function companyCluster() {
 
             companyCircle.mouseover(function () {
                 companyCircle.addClass("highlight");
-                hoverLabel.text(companyCircle.data().companyName);
+                hoverLabel.html(`<p>Company: ${companyCircle.data().companyName}<p>
+                <p>Manufactured: ${companyCircle.data().companyLocationTotal}<p><p>Origin: ${companyCircle.data().beanOriginTotal}<p>`);
             });
             companyCircle.mouseout(function () {
                 companyCircle.removeClass("highlight");
@@ -310,7 +312,8 @@ function originCluster() {
 
             originCircle.mouseover(function () {
                 originCircle.addClass("highlight");
-                hoverLabel.text(originCircle.data().companyName);
+                hoverLabel.html(`<p>Company: ${originCircle.data().companyName}<p>
+                <p>Manufactured: ${originCircle.data().companyLocationTotal}<p><p>Origin: ${originCircle.data().beanOriginTotal}<p>`);
             });
             originCircle.mouseout(function () {
                 originCircle.removeClass("highlight");
