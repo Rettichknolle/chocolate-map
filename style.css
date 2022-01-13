@@ -63,7 +63,7 @@ background-color: #e6d8d1;
 .toggleOrigin {
     position: absolute;
     top: 56px;
-    left: 256px;
+    left: 336px;
     size: 96px;
     font-size: 36px;
     font-weight: bold;
@@ -74,7 +74,7 @@ background-color: #e6d8d1;
 .toggleStacked {
     position: absolute;
     top: 56px;
-    left: 410px;
+    left: 480px;
     size: 96px;
     font-size: 36px;
     font-weight: bold;
