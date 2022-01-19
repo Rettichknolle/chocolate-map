@@ -12,10 +12,11 @@
 <body>
     <div id="container" class="ui-element"></div>
     <div id="mouseover-label" class="ui-element"></div>
-
-    <div class="toggleCompany" onclick="companyCluster();// return drawOriginMap();">Manufactured</div>
-    <div class="toggleOrigin" onclick="originCluster();// return drawCompanyMap();">Origin</div>
-    <div class="toggleStacked" onclick="stackedCompanyDiagram();// return drawCompanyMap();">Rating</div>
+<div class="button-container">
+    <button id="toggle-company" class="button" onclick="companyCluster();// return drawOriginMap();">Manufactured</button>
+    <button id="toggle-origin" class="button" onclick="originCluster();// return drawCompanyMap();">Origin</button>
+    <button id="toggle-stacked" class="button" onclick="stackedCompanyDiagram();// return drawCompanyMap();">Rating</button>
+</div>
     <script src="lib/jquery-3.6.0.min.js">    </script>
     <script src="lib/gmynd.js">    </script>
     <script src="data.js"></script>
