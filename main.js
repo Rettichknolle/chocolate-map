@@ -15,7 +15,9 @@ let toggleStatus = 0;
 $(function () {
     prepareData();
     calculateCompanyAndOriginPositions();
+    createMapCircles();
 });
+
 
 function prepareData() {
     //merge populationData with positionData
@@ -33,7 +35,7 @@ function prepareData() {
      });*/
     companyData = gmynd.mergeData(beanData, positionData, "companyLocationTotal", "countryName");
     originData = gmynd.mergeData(beanData, positionData, "beanOriginTotal", "countryName");
-   
+
     beanData = gmynd.mergeData(beanData, positionData, "companyLocationTotal", "countryName");
     gmynd.renameProps(beanData, ["latitude", "longitude"], ["companyLatitude", "companyLongitude"]);
     beanData = gmynd.mergeData(beanData, positionData, "beanOriginTotal", "countryName");
@@ -56,7 +58,7 @@ function prepareData() {
     maxPopulation = getMax(data, "population");
     console.log("maxPopulation ", maxPopulation);
 }
-
+ 
 function getMax(givenData, key) {
     let myMax = givenData[0][key];
     givenData.forEach(element => {
@@ -148,7 +150,7 @@ function drawCompanyMap() {
         });
 
         /*countryCircle.data (data[i]);
-
+ 
         countryCircle.mouseover(function() {
             countryCircle.addClass("highlight");
             label.text(countryCircle.data().companyAmount);
@@ -191,7 +193,7 @@ function drawOriginMap() {
         });
 
         /*countryCircle.data (data[i]);
-
+ 
         countryCircle.mouseover(function() {
             countryCircle.addClass("highlight");
             label.text(countryCircle.data().companyAmount);
@@ -206,11 +208,8 @@ function drawOriginMap() {
     }
 }
 
-
 function calculateCompanyAndOriginPositions() {
-  
     var radius = gmynd.circleRadius(200);
-
 
     for (const prop in groupedByCompany) {
         let companyLongitude = gmynd.map(groupedByCompany[prop][0].companyLongitude, -180, 180, 0, stageWidth)
@@ -253,106 +252,57 @@ function calculateCompanyAndOriginPositions() {
     }
 
 
-    
-   /* $( ".toggleOrigin" ).click(function() {
-        $( ".block" ).animate({ "left": "+=50px" }, "slow" );
-      });
-       
-      $( "#left" ).click(function(){
-        $( ".block" ).animate({ "left": "-=50px" }, "slow" );
-      });*/
 
+    /* $( ".toggleOrigin" ).click(function() {
+         $( ".block" ).animate({ "left": "+=50px" }, "slow" );
+       });
+        
+       $( "#left" ).click(function(){
+         $( ".block" ).animate({ "left": "-=50px" }, "slow" );
+       });*/
+
+}
+
+function createMapCircles() {
+    console.log("creating circles");
+    const radius = gmynd.circleRadius(70);
+    beanData.forEach(chocolate => {
+        let chocCirc = $("<div></div>");
+        chocCirc.addClass("chocCirc");
+        chocCirc.css({
+            position: "absolute",
+            width: radius,
+            height: radius,
+            left: chocolate.originX,
+            top: chocolate.originY,
+            "background-color": "#6D340C",
+            "border-radius": "50%"
+        });
+        chocCirc.data(chocolate);
+        stage.append(chocCirc)
+    })
 }
 
 function companyCluster() {
-    //let circleCounts = Object.keys(groupedByCompany).length;
-    console.log(Object.keys(groupedByCompany).length);
-    let companyIndex = 0
-    var radius = gmynd.circleRadius(200);
-    for (const prop in groupedByCompany) {
-        let companyLongitude = gmynd.map(groupedByCompany[prop][0].companyLongitude, -180, 180, 0, stageWidth)
-        let companyLatitude = gmynd.map(groupedByCompany[prop][0].companyLatitude, -90, 90, stageHeight, 0)
-        //circleCount = Object.keys(groupedByCompany[prop]).length;
-        circleCount = groupedByCompany[prop].length;
-
-        for (i = 0; i < circleCount; i++) {
-            const companyCountries = groupedByCompany[prop];
-            console.log(prop, ":", companyCountries.length);
-            // companyCountries.forEach((companyLocationTotal, index) => {
-            // console.log(index);
-            let theta = 2.39998131 * i; //unbedingt mit dieser Zahl rumspielen! 2.2 kommt ganz cool
-            let spiralRadius = radius * Math.sqrt(theta) * 0.3; // *1.5 entzerrt alles ein bisschen
-            let xPos = (companyLongitude) + Math.cos(theta) * spiralRadius;
-            let yPos = (companyLatitude) + Math.sin(theta) * spiralRadius;
-            let companyCircle = $("<div></div>")
-            companyCircle.css({
-                position: "absolute",
-                width: radius / 2,
-                height: radius / 2,
-                left: xPos - 100,
-                top: yPos + 120,
-                "background-color": "#6D340C",
-                //opacity: 0.5,
-                "border-radius": "50%"
-            });
-            companyCircle.data(groupedByCompany[prop][i]);
-
-            companyCircle.mouseover(function () {
-                companyCircle.addClass("highlight");
-                hoverLabel.html(`<p>Company: ${companyCircle.data().companyName}<p>
-                <p>Manufactured: ${companyCircle.data().companyLocationTotal}<p><p>Origin: ${companyCircle.data().beanOriginTotal}<p>`);
-            });
-            companyCircle.mouseout(function () {
-                companyCircle.removeClass("highlight");
-            });
-            stage.append(companyCircle)
-        };
-        companyIndex++;
-    }
+    console.log("showing companies");
+    let circles = $(".chocCirc");
+    circles.each(function () {
+        let dat = $(this).data();
+        $(this).animate({
+            left: dat.companyX,
+            top: dat.companyY
+        }, 500);
+    });
 }
 
 function originCluster() {
-    $('.companyCircle, .originCircle').remove()
-    //let circleCounts = Object.keys(groupedByCompany).length;
-    console.log(Object.keys(groupedByOrigin).length);
-    let originIndex = 0
-    var radius = gmynd.circleRadius(200);
-    for (const prop in groupedByOrigin) {
-        let originLongitude = gmynd.map(groupedByOrigin[prop][0].originLongitude, -180, 180, 0, stageWidth)
-        let originLatitude = gmynd.map(groupedByOrigin[prop][0].originLatitude, -90, 90, stageHeight, 0)
-        circleCount = groupedByOrigin[prop].length;
-
-        for (i = 0; i < circleCount; i++) {
-            const originCountries = groupedByOrigin[prop];
-            console.log(prop, ":", originCountries.length);
-            // companyCountries.forEach((companyLocationTotal, index) => {
-            // console.log(index);
-            let theta = 2.39998131 * i; //unbedingt mit dieser Zahl rumspielen! 2.2 kommt ganz cool
-            let spiralRadius = radius * Math.sqrt(theta) * 0.3; // *1.5 entzerrt alles ein bisschen
-            let xPos = (originLongitude) + Math.cos(theta) * spiralRadius;
-            let yPos = (originLatitude) + Math.sin(theta) * spiralRadius;
-            let originCircle = $("<div></div>")
-            originCircle.css({
-                position: "absolute",
-                width: radius / 2,
-                height: radius / 2,
-                left: xPos - 100,
-                top: yPos + 120,
-                "background-color": "#a75f29",
-                "border-radius": "50%"
-            });
-            originCircle.data(groupedByOrigin[prop][i]);
-
-            originCircle.mouseover(function () {
-                originCircle.addClass("highlight");
-                hoverLabel.html(`<p>Company: ${originCircle.data().companyName}<p>
-                <p>Manufactured: ${originCircle.data().companyLocationTotal}<p><p>Origin: ${originCircle.data().beanOriginTotal}<p>`);
-            });
-            originCircle.mouseout(function () {
-                originCircle.removeClass("highlight");
-            });
-            stage.append(originCircle)
-        };
-        originIndex++;
-    }
+    console.log("showing origins");
+    let circles = $(".chocCirc");
+    circles.each(function () {
+        let dat = $(this).data();
+        $(this).animate({
+            left: dat.originX,
+            top: dat.originY
+        }, 500);
+    });
 }
