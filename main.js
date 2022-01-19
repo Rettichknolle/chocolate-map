@@ -247,8 +247,8 @@ function calculateCompanyAndOriginPositions() {
             let spiralRadius = radius * Math.sqrt(theta) * 0.3; // *1.5 entzerrt alles ein bisschen
             let xPos = (originLongitude) + Math.cos(theta) * spiralRadius;
             let yPos = (originLatitude) + Math.sin(theta) * spiralRadius;
-            groupedByOrigin[prop][i].companyX = xPos;
-            groupedByOrigin[prop][i].companyY = yPos;
+            groupedByOrigin[prop][i].originX = xPos;
+            groupedByOrigin[prop][i].originY = yPos;
         };
     }
 
